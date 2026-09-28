@@ -1,8 +1,8 @@
+class Solution:
     def missingNumber(self, nums: list[int]) -> int:
-        n = len(nums)
+        ordernmb = set(nums)
 
-        missingline = n * (n + 1) // 2
-        actualline =  sum(nums)
-
-        return missingline - actualline
+        for i in range( len(nums) + 2 ):
+            if i not in ordernmb:
+                return i
 
